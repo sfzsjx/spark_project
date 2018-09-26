@@ -255,7 +255,7 @@ public class jdbcCRUD {
             conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/spark_project?characterEncoding=utf8",
                     "root",
-                    "root");
+                    "123456");
 
             // 第一个，SQL语句中，值所在的地方，都用问好代表
             String sql = "insert into test_user(name,age) values(?,?)";

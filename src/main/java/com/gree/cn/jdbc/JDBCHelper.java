@@ -154,9 +154,11 @@ import java.util.List;
             PreparedStatement pstmt = null;
 
             try {
+                //获取数据库连接
                 conn = getConnection();
+                //将连接设置为不自动提交模式
                 conn.setAutoCommit(false);
-
+                //执行sql增删改句柄
                 pstmt = conn.prepareStatement(sql);
 
                 if(params != null && params.length > 0) {
@@ -172,6 +174,7 @@ import java.util.List;
                 e.printStackTrace();
             } finally {
                 if(conn != null) {
+                    //将连接push会数据库连接池中
                     datasource.push(conn);
                 }
             }

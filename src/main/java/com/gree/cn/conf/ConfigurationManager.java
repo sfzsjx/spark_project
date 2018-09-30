@@ -75,6 +75,7 @@ import java.util.Properties;
          * 下一次外界代码，再调用ConfigurationManager的getProperty()方法时，就不会再次加载类，不会再次初始化
          * 类，和执行静态代码块了，所以也印证了，我们上面所说的，类只会加载一次，配置文件也仅仅会加载一次
          *
+         * 获取字符串类型的配置项
          * @param key
          * @return value
          */

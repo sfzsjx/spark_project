@@ -20,13 +20,13 @@ import java.util.Map;
             // 获取JDBCHelper的单例
             JDBCHelper jdbcHelper = JDBCHelper.getInstance();
 
-//            // 测试普通的增删改语句
-//		jdbcHelper.executeUpdate(
-//				"insert into test_user(name,age) values(?,?)",
-//				new Object[]{"王二", 28});
+            // 测试普通的增删改语句
+		jdbcHelper.executeUpdate(
+				"insert into test_user(name,age) values(?,?)",
+				new Object[]{"王二", 28});
 
             // 测试查询语句
-		final Map<String, Object> testUser = new HashMap<String, Object>();
+//		final Map<String, Object> testUser = new HashMap<String, Object>();
 
 		// 设计一个内部接口QueryCallback
 		// 那么在执行查询语句的时候，我们就可以封装和指定自己的查询结果的处理逻辑
@@ -57,14 +57,14 @@ import java.util.Map;
 //
 //		System.out.println(testUser.get("name") + ":" + testUser.get("age"));
 
-            // 测试批量执行SQL语句
-            String sql = "insert into test_user(name,age) values(?,?)";
-
-            List<Object[]> paramsList = new ArrayList<Object[]>();
-            paramsList.add(new Object[]{"麻子", 30});
-            paramsList.add(new Object[]{"王五", 35});
-
-            jdbcHelper.executeBatch(sql, paramsList);
+//            // 测试批量执行SQL语句
+//            String sql = "insert into test_user(name,age) values(?,?)";
+//
+//            List<Object[]> paramsList = new ArrayList<Object[]>();
+//            paramsList.add(new Object[]{"麻子", 30});
+//            paramsList.add(new Object[]{"王五", 35});
+//
+//            jdbcHelper.executeBatch(sql, paramsList);
         }
 
     }

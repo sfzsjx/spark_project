@@ -133,7 +133,7 @@
                     <includeProjectDependencies>true</includeProjectDependencies>
                     <includePluginDependencies>false</includePluginDependencies>
                     <classpathScope>compile</classpathScope>
-                    <mainClass>com.ibeifeng.sparkproject.App</mainClass>
+                    <mainClass>com.gree.cn.App</mainClass>
                 </configuration>
             </plugin>
 
